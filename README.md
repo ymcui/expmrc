@@ -8,7 +8,7 @@ To achieve a higher score in ExpMRC, the model should not only give correct answ
 
 
 
-**ExpMRC: Explainability Evaluation for Machine Reading Comprehension**
+**ExpMRC: Explainability Evaluation for Machine Reading Comprehension**  
 *Yiming Cui, Ting Liu, Wanxiang Che, Zhigang Chen, Shijin Wang*
 
 arXiv pre-print: TBA
