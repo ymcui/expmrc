@@ -6,14 +6,12 @@ With the development of the pre-trained language models (PLMs), achieving human-
 
 To achieve a higher score in ExpMRC, the model should not only give correct answers for the questions, but also should give a passage span as the evidence text. We greatly welcome the submission that could be generalize well on different languages and types of MRC task with unsupervised or semi-supervised approaches.
 
-
-
 **ExpMRC: Explainability Evaluation for Machine Reading Comprehension**  
 *Yiming Cui, Ting Liu, Wanxiang Che, Zhigang Chen, Shijin Wang*
 
-arXiv pre-print: TBA
+arXiv pre-print: [https://arxiv.org/abs/2105.04126](https://arxiv.org/abs/2105.04126)
 
-
+Leaderboard: [https://ymcui.github.io/expmrc/](https://ymcui.github.io/expmrc/)
 
 ## News
 
@@ -21,7 +19,7 @@ Thank you for your interest in our dataset. We are about to release the dataset 
 
 
 
-## Submission to Leaderboard
+## Submission to Leaderboard (Not Ready Yet)
 
 To preserve the integrity of test results, we do not release the test sets to the public. Instead, we require you to upload your model onto CodaLab, so that we can run it on the test sets for you. You can follow the instructions on CodaLab (which is similar to SQuAD, CMRC 2018 submission).
 
@@ -34,7 +32,12 @@ Please visit our leaderboard for more information: [https://ymcui.github.io/expm
 If you are using our benchmark in your work, please cite:
 
 ```
-
+@article{cui2021expmrc,
+  title={ExpMRC: Explainability Evaluation for Machine Reading Comprehension},
+  author={Cui, Yiming and Liu, Ting and Che, Wanxiang and Chen, Zhigang and Wang, Shijin},
+  journal={arXiv preprint arXiv:2105.04126},
+  year={2021}
+}
 ```
 
 
