@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<!--Author: Pranav Rajpurkar 2016-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+	ExpMRC</title>
+	<meta name="description" content=".">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta property="og:image" content="/logo.png">
+	<link rel="image_src" type="image/png" href="./logo.png">
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+	<link rel="icon" href="./favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="./bootstrap.min.css">
+	<link rel="stylesheet" href="./layout.css">
+	<link rel="stylesheet" href="./index.css">
+	<script async defer src="https://buttons.github.io/buttons.js">
+	</script>
+	<script src="./analytics.js">
+	</script>
+</head>
+
+
+<body onload="initTable()">
+	<div class="navbar navbar-default navbar-fixed-top" id="topNavbar" role="navigation">
+		<div class="container clearfix" id="navContainer">
+			<div class="rightNav">
+				<div class="collapseDiv">
+					<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="glyphicon glyphicon-menu-hamburger">
+						</span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="navbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="https://ymcui.github.io/cmrc2018/">
+							CMRC 2018</a>
+						</li>
+						<li>
+							<a href="https://ymcui.github.io/cmrc2019/">
+							CMRC 2019</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="leftNav">
+				<div class="brandDiv">
+					<a class="navbar-brand" href="./">
+					ExpMRC</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="cover" id="topCover">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 id="appTitle">
+						<font face="arial"><b>ExpMRC</b></font>
+					</h1>
+					<h2 id="appSubtitle"><font face="helvetica">
+					Explainability Evaluation for Machine Reading Comprehension
+					</font></h2>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="cover" id="contentCover">
+		<div class="container">
+
+<div>
+<div style="width:35%;float:left;">
+	<h2></h2>
+	<div class="infoCard">		
+	<div class="infoBody">
+		<div class="infoHeadline">
+			<h2>
+			What is ExpMRC?</h2>
+		</div>
+
+		<p align="left">
+			<b>ExpMRC</b> is a benchmark for the <b>Exp</b>lainability evaluation of <b>M</b>achine <b>R</b>eading <b>C</b>omprehension.
+			ExpMRC contains four subsets of popular MRC datasets with additionally annotated evidences, including <a href="https://www.aclweb.org/anthology/D16-1264/">SQuAD</a>, <a href="https://www.aclweb.org/anthology/D19-1600/">CMRC 2018</a>, RACE<sup>+</sup> (similar to <a href="https://www.aclweb.org/anthology/D17-1082/">RACE</a>), and <a href="https://www.aclweb.org/anthology/2020.tacl-1.10/">C<sup>3</sup></a>, covering span-extraction and multiple-choice questions MRC tasks in both English and Chinese.
+		</p>
+
+		<a class="btn actionBtn" href="https://arxiv.org/abs/2105.04126">
+		ExpMRC paper <br/>[Cui et al., 2021]</a>
+
+		<div class="infoHeadline">
+			<h2>Getting Started</h2>
+		</div>
+
+		<p align="left">
+			Download a copy of the dataset (distributed under the  <a href="http://creativecommons.org/licenses/by-sa/4.0/legalcode">CC BY-SA 4.0</a> license):
+			<ul class="list-unstyled">
+				<li>
+					<a class="btn actionBtn inverseBtn" href="#" download>
+					Download ExpMRC Dataset</a>
+				</li>
+			</ul>
+		</p>
+
+		<p align="left">
+			You may also be interested in a quick baseline system based on pre-trained language model (such as BERT).
+			<ul class="list-unstyled">
+				<li>
+					<a class="btn actionBtn inverseBtn" href="#" download>
+					Get Baseline Code</a>
+				</li>
+			</ul>
+		</p>
+
+
+		<div class="infoHeadline">
+			<h2>Official Submission</h2>
+		</div>
+
+		<p align="left">
+			To preserve the integrity of test results, we do not release the test sets to the public. Instead, we require you to upload your model onto CodaLab, so that we can run it on the test sets for you. You can follow the instructions on CodaLab (which is similar to SQuAD, CMRC 2018 submission).
+
+			<a class="btn actionBtn inverseBtn" href="https://worksheets.codalab.org/worksheets/0x96f61ee5e9914aee8b54bd11e66ec647">
+			Submission Tutorial</a>
+		</p>
+
+
+		<div class="infoHeadline">
+			<h2>Submission Policy (IMPORTANT!)</h2>
+		</div>
+
+		<p align="left">
+			Please read the following before submission. Also, we strongly suggest the participants follow our baseline settings to ensure a fair comparison for academic purposes.
+			<li>You are free to use any open-source machine reading comprehension data or automatically generated data for training their systems (both labeled and unlabeled). </li>
+			<li>You are NOT allowed to use any newly human-annotated data (which is not publicly available) for training, which violates our submission policy.</li>
+			<li>We do not encourage using the development set of ExpMRC for training. Such submissions will be marked with an asterisk (*).</li>
+		</p>
+
+		<div class="infoHeadline">
+			<h2>About Leaderboard</h2>
+		</div>
+
+		<p align="left">
+			The leaderboard is updated once new submissions are included.
+			The ranking is based on the "Overall F1", which considers both answer and evidence F1 (but not solely the product of them).
+			The details of the evaluation process can be seen <a href="">here</a>.
+		</p>
+
+		<div class="infoHeadline">
+			<h2>
+			Have Questions?</h2>
+		</div>
+		<p>
+			Ask us questions at our   <a href="https://github.com/ymcui/expmrc">
+			GitHub repository</a>
+			or at <a href="mailto:expmrc@126.com">
+			expmrc [at] 126 [dot] com</a>
+		.</p>
+
+	</div>
+
+	<div class="infoSubheadline">
+		<a class="github-button" href="https://github.com/ymcui/expmrc" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ymcui/expmrc on GitHub">ExpMRC</a>
+	</div>
+
+</div>
+</div>
+</div>
+
+
+<div style="width:3%;float:left">
+	<h2></h2>
+</div>
+
+
+<div style="width:62%;float:right">
+	<h2></h2>
+<div class="infoCard">
+		<div class="infoBody">
+			<div class="infoHeadline" id="">
+				<h2>Leaderboard</h2>
+			</div>
+
+			<p align="justify">
+				<font face="helvetica">
+					Explainability is a universal demand for various machine reading comprehension tasks. Most of the MRC systems yield near-human or over-human performance on solving these datasets, but will your system also surpass the humans on giving correct explanations as well?
+				</font>
+			</p>
+
+			<!--tab buttons-->
+			<table align="center">
+				<tr>
+					<th><a class="btn actionBtn inverseBtn" onclick="showSQuAD()" id="squadBtn">SQuAD (EN)</a></th>
+					<th width="2%"></th>
+					<th><a class="btn actionBtn inverseBtn" onclick="showCMRC2018()" id="cmrc2018Btn">CMRC 2018 (ZH)</a></th>
+					<th width="2%"></th>
+					<th><a class="btn actionBtn inverseBtn" onclick="showRACE()" id="raceBtn">RACE<sup>+</sup> (EN)</a></th>
+					<th width="2%"></th>
+					<th><a class="btn actionBtn inverseBtn" onclick="showC3()" id="c3Btn">C<sup>3</sup> (ZH)</a></th>					
+				</tr>
+			</table>
+
+			<table class="table performanceTable" id="squadTable">
+				<tr>
+					<th>Rank</th>
+					<th>Model</th>
+					<th>Answer<br>F1</th>
+					<th>Evidence<br>F1</th>
+					<th>Overall<br>F1</th>
+				</tr>
+
+				<tr class="human-row">
+					<td></td>
+					<td>
+						Human Performance				
+						<p class="institution"><font face="helvetica" size="2">Joint Laboratory of HIT and iFLYTEK Research</p>
+						<a href="#">[Cui et al., 2021]</font></a>
+					</td>
+					<td>91.214</td>
+					<td>89.907</td>
+					<td>81.617</td>
+				</tr>
+
+				<tr>
+					<td><p>1</p><span class="date label label-default">2020/12/1</span></td>
+					<td style="word-break:break-word;">
+					BERT-large + Pseudo-data (single model)
+					<p class="institution"><font face="helvetica" size="2">Joint Laboratory of HIT and iFLYTEK Research</p><a href="">https://github.com/ymcui/MacBERT</font></a>
+					</td>
+					<td>74.786</td>
+					<td><b>31.923</b></td>
+					<td><b>60.177</b></td>
+				</tr>
+
+				<tr>
+					<td><p>2</p><span class="date label label-default">2020/12/1</span></td>
+					<td style="word-break:break-word;">
+					BERT-large + PA Sent. (single model)
+					<p class="institution"><font face="helvetica" size="2">Joint Laboratory of HIT and iFLYTEK Research</p><a href="">https://github.com/ymcui/MacBERT</font></a>
+					</td>
+					<td>74.786</td>
+					<td><b>31.923</b></td>
+					<td><b>60.177</b></td>
+				</tr>
+
+
+				<tr>
+					<td><p>3</p><span class="date label label-default">2020/12/1</span></td>
+					<td style="word-break:break-word;">
+					BERT-large + MSS w/ Ques. (single model)
+					<p class="institution"><font face="helvetica" size="2">Joint Laboratory of HIT and iFLYTEK Research</p><a href="">https://github.com/ymcui/MacBERT</font></a>
+					</td>
+					<td>74.786</td>
+					<td><b>31.923</b></td>
+					<td><b>60.177</b></td>
+				</tr>
+
+				<tr>
+					<td><p>3</p><span class="date label label-default">2019/10/14</span></td>
+					<td style="word-break:break-word;">
+					RoBERTa-wwm-ext-large (single model)
+					<p class="institution"><font face="helvetica" size="2">Joint Laboratory of HIT and iFLYTEK Research</p><a href="https://github.com/ymcui/Chinese-BERT-wwm">https://github.com/ymcui/Chinese-BERT-wwm</font></a></td>
+					<td>74.198</td>
+					<td>31.548</td>
+					<td>60.074</td>
+				</tr>
+			</table>
+
+
+			<table class="table performanceTable" id="cmrc2018Table">
+				<tr>
+					<th>Rank</th>
+					<th>Model</th>
+					<th>Answer<br>F1</th>
+					<th>Evidence<br>F1</th>
+					<th>Overall<br>F1</th>
+				</tr>
+
+
+				<tr class="human-row">
+					<td></td>
+					<td>
+						Human Performance				
+						<p class="institution"><font face="helvetica" size="2">Joint Laboratory of HIT and iFLYTEK Research</p>
+						<a href="#">[Cui et al., 2021]</font></a>
+					</td>
+					<td>97.923</td>
+					<td>94.613</td>
+					<td>92.640</td>
+				</tr>
+
+				<tr>
+					<td><p>1</p><span class="date label label-default">2020/5/1</span></td>
+
+					<td style="word-break:break-word;">
+					MacBERT-large (single model)
+					<p class="institution"><font face="helvetica" size="2">Joint Laboratory of HIT and iFLYTEK Research</p><a href="https://github.com/ymcui/MacBERT">https://github.com/ymcui/MacBERT</font></a>
+					</td>
+					<td>74.786</td>
+					<td><b>31.923</b></td>
+					<td><b>60.177</b></td>
+				</tr>
+
+
+			</table>
+
+
+			<table class="table performanceTable" id="raceTable">
+				<tr>
+					<th>Rank</th>
+					<th>Model</th>
+					<th>Answer<br>Acc</th>
+					<th>Evidence<br>F1</th>
+					<th>Overall<br>F1</th>
+				</tr>
+
+
+				<tr class="human-row">
+					<td></td>
+					<td>
+						Human Performance				
+						<p class="institution"><font face="helvetica" size="2">Joint Laboratory of HIT and iFLYTEK Research</p>
+						<a href="#">[Cui et al., 2021]</font></a>
+					</td>
+					<td>92.400</td>
+					<td>97.914</td>
+					<td>90.382</td>
+				</tr>
+
+			</table>
+
+
+			<table class="table performanceTable" id="c3Table">
+				<tr>
+					<th>Rank</th>
+					<th>Model</th>
+					<th>Answer<br>Acc</th>
+					<th>Evidence<br>F1</th>
+					<th>Overall<br>F1</th>
+				</tr>
+
+
+				<tr class="human-row">
+					<td></td>
+					<td>
+						Human Performance				
+						<p class="institution"><font face="helvetica" size="2">Joint Laboratory of HIT and iFLYTEK Research</p>
+						<a href="#">[Cui et al., 2021]</font></a>
+					</td>
+					<td>93.600</td>
+					<td>97.689</td>
+					<td>91.444</td>
+				</tr>
+
+				<tr>
+					<td><p>1</p><span class="date label label-default">2020/5/1</span></td>
+
+					<td style="word-break:break-word;">
+					MacBERT-large (single model)
+					<p class="institution"><font face="helvetica" size="2">Joint Laboratory of HIT and iFLYTEK Research</p><a href="https://github.com/ymcui/MacBERT">https://github.com/ymcui/MacBERT</font></a>
+					</td>
+					<td>74.786</td>
+					<td><b>31.923</b></td>
+					<td><b>60.177</b></td>
+				</tr>
+
+
+			</table>
+
+
+
+		</div>
+	</div>
+</div>
+</div>
+</div>
+
+<script>
+function initTable() {
+	document.getElementById("squadTable").style.visibility="visible";
+	document.getElementById("squadTable").style.display="";
+	document.getElementById("raceTable").style.display="none";
+	document.getElementById("cmrc2018Table").style.display="none";
+	document.getElementById("c3Table").style.display="none";
+}
+
+function showSQuAD() {
+	document.getElementById("squadBtn").style.fontSize="24px";
+	document.getElementById("cmrc2018Btn").style.fontSize="";
+	document.getElementById("raceBtn").style.fontSize="";
+	document.getElementById("c3Btn").style.fontSize="";
+
+	document.getElementById("squadTable").style.visibility="visible";
+	document.getElementById("squadTable").style.display="";
+	document.getElementById("raceTable").style.visibility="hidden";
+	document.getElementById("raceTable").style.display="none";
+	document.getElementById("cmrc2018Table").style.visibility="hidden";
+	document.getElementById("cmrc2018Table").style.display="none";
+	document.getElementById("c3Table").style.visibility="hidden";
+	document.getElementById("c3Table").style.display="none";
+}
+
+function showCMRC2018() {
+	document.getElementById("squadBtn").style.fontSize="";
+	document.getElementById("cmrc2018Btn").style.fontSize="24px";
+	document.getElementById("raceBtn").style.fontSize="";
+	document.getElementById("c3Btn").style.fontSize="";
+
+	document.getElementById("squadTable").style.visibility="hidden";
+	document.getElementById("squadTable").style.display="none";
+	document.getElementById("raceTable").style.visibility="hidden";
+	document.getElementById("raceTable").style.display="none";
+	document.getElementById("cmrc2018Table").style.visibility="visible";
+	document.getElementById("cmrc2018Table").style.display="";
+	document.getElementById("c3Table").style.visibility="hidden";
+	document.getElementById("c3Table").style.display="none";
+}
+
+function showRACE() {
+	document.getElementById("squadBtn").style.fontSize="";
+	document.getElementById("cmrc2018Btn").style.fontSize="";
+	document.getElementById("raceBtn").style.fontSize="24px";
+	document.getElementById("c3Btn").style.fontSize="";
+
+	document.getElementById("squadTable").style.visibility="hidden";
+	document.getElementById("squadTable").style.display="none";
+	document.getElementById("raceTable").style.visibility="visible";
+	document.getElementById("raceTable").style.display="";
+	document.getElementById("cmrc2018Table").style.visibility="hidden";
+	document.getElementById("cmrc2018Table").style.display="none";
+	document.getElementById("c3Table").style.visibility="hidden";
+	document.getElementById("c3Table").style.display="none";
+}
+
+
+function showC3() {
+	document.getElementById("squadBtn").style.fontSize="";
+	document.getElementById("cmrc2018Btn").style.fontSize="";
+	document.getElementById("raceBtn").style.fontSize="";
+	document.getElementById("c3Btn").style.fontSize="24px";
+
+	document.getElementById("squadTable").style.visibility="hidden";
+	document.getElementById("squadTable").style.display="none";
+	document.getElementById("raceTable").style.visibility="hidden";
+	document.getElementById("raceTable").style.display="none";
+	document.getElementById("cmrc2018Table").style.visibility="hidden";
+	document.getElementById("cmrc2018Table").style.display="none";
+	document.getElementById("c3Table").style.visibility="visible";
+	document.getElementById("c3Table").style.display="";
+}
+
+</script>
+
+
+
+		<nav class="navbar navbar-default navbar-static-bottom footer">
+			<div class="container clearfix">
+				<div class="rightNav">
+					<div>
+						<ul class="nav navbar-nav navbar-right">
+							<li>
+								<a href="http://hfl-rc.github.io">
+								Joint Laboratory of HIT and iFLYTEK Research</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<script src="./jquery.min.js">
+		</script>
+		<script src="./bootstrap.min.js">
+		</script>
+	</body>
+	</html>
