@@ -18,6 +18,13 @@ Leaderboard: [https://ymcui.github.io/expmrc/](https://ymcui.github.io/expmrc/)
 Thank you for your interest in our dataset. We are about to release the dataset and baseline codes in the next few weeks. Stay tuned!
 
 
+## Data
+
+As stated in the paper, we **DO NOT** provide any training data. We intend to encourage our community to develop unsupervised or semi-supervised approaches for the explainability of MRC models. 
+
+For the developmemt sets of ExpMRC, please see `data` directory. 
+
+
 ## Submission to Leaderboard (Not Ready Yet)
 
 Please visit our leaderboard for more information: [https://ymcui.github.io/expmrc/](https://ymcui.github.io/expmrc/)
@@ -26,7 +33,12 @@ To preserve the integrity of test results and improve the reproducibility, **we 
 
 You can submit your model on one or more subsets in ExpMRC. 
 
-Sample submission files are shown in `sample_submission` folder.
+Sample submission files are shown in `sample_submission` directory.
+
+Submission policies:
+1. You are free to use any open-source machine reading comprehension data or automatically generated data for training your systems (both labeled and unlabeled).
+2. You are **NOT** allowed to use any newly human-annotated data (which is not publicly available) for training.
+3. We do not encourage using the development set of ExpMRC for training (though it is not prohibited). You should declare if the system is trained by using the whole/part of the development set. Such submissions will be marked with an asterisk (*).
 
 
 ## Citation
