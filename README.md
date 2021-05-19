@@ -55,6 +55,11 @@ If you are using our benchmark in your work, please cite:
 ```
 
 
+## Acknowledgment
+
+[Yiming Cui](https://ymcui.com) would like to thank [Google TPU Research Cloud (TRC)](https://g.co/tfrc) program for providing computing resource.
+We also thank [SQuAD team](https://rajpurkar.github.io/SQuAD-explorer/) for open-sourcing their website template.
+
 
 ## Contact us
 
