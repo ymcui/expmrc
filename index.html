@@ -89,7 +89,7 @@
 		</p>
 
 		<a class="btn actionBtn" href="https://arxiv.org/abs/2105.04126">
-		ExpMRC paper <br/>[Cui et al., 2021]</a>
+		ExpMRC paper [Cui et al., 2021]</a>
 
 		<div class="infoHeadline">
 			<h2>Getting Started</h2>
@@ -100,13 +100,31 @@
 			<ul class="list-unstyled">
 				<li>
 					<a class="btn actionBtn inverseBtn" href="https://github.com/ymcui/expmrc/blob/main/data" download>
-					Download ExpMRC Dataset</a>
+					Download ExpMRC Development Set</a>
 				</li>
 			</ul>
 		</p>
 
 		<p align="left">
-			You may also be interested in a quick baseline system based on pre-trained language model (such as BERT).
+			To evaluate your models, we have also made available the evaluation script for official evaluation, with sample predictions on each subset. 
+			To run the evaluation, use <code>python eval_expmrc.py &lt;path_to_dev&gt; &lt;path_to_predictions&gt;</code>
+			
+			<ul class="list-unstyled">
+				<li>
+					<a class="btn actionBtn inverseBtn" href="https://github.com/ymcui/expmrc/blob/main/eval_expmrc.py" download>
+					ExpMRC Evaluation Script</a>
+				</li>
+			</ul>
+			<ul class="list-unstyled">
+				<li>
+					<a class="btn actionBtn inverseBtn" href="https://github.com/ymcui/expmrc/tree/main/sample_submission" download>
+					Sample Prediction Files on Dev Set</a>
+				</li>
+			</ul>
+		</p>
+
+		<p align="left">
+			You may also be interested in a quick baseline system based on pre-trained language model, such as BERT. The codes are distributed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache-2.0</a> license.
 			<ul class="list-unstyled">
 				<li>
 					<a class="btn actionBtn inverseBtn" href="https://github.com/ymcui/expmrc/blob/main/baseline" download>
