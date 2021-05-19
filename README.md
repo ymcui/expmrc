@@ -1,4 +1,13 @@
-# ExpMRC
+<p align="center">
+    <br>
+    <img src="./banner.png" width="500"/>
+    <br>
+</p>
+<p align="center">
+    <a href="https://github.com/ymcui/expmrc/blob/master/LICENSE">
+        <img alt="GitHub" src="https://img.shields.io/github/license/ymcui/expmrc.svg?color=blue&style=flat-square">
+    </a>
+</p>
 
 With the development of the pre-trained language models (PLMs), achieving human-level performance on several machine reading comprehension (MRC) dataset is not as hard as it used to be. However, the explainability behind these artifacts still remains unclear, raising concerns on utilizing these models in real-life applications. To improve the explainability of MRC tasks, we propose ExpMRC benchmark. 
 
@@ -15,6 +24,8 @@ Leaderboard: [https://ymcui.github.io/expmrc/](https://ymcui.github.io/expmrc/)
 
 ## News
 
+[May 20, 2021] **We have released our dataset. Please check `data` directory. **
+
 [May 17, 2021] Thank you for your interest in our dataset. We are about to release the dataset and baseline codes in the next few weeks, hopefully on late May. Stay tuned!
 
 
@@ -25,15 +36,11 @@ As stated in the paper, we **DO NOT** provide any training data. We intend to en
 For the developmemt sets of ExpMRC, please see `data` directory. 
 
 
-## Submission to Leaderboard (Not Ready Yet)
+## Submission to Leaderboard
 
 Please visit our leaderboard for more information: [https://ymcui.github.io/expmrc/](https://ymcui.github.io/expmrc/)
 
-To preserve the integrity of test results and improve the reproducibility, **we do not release the test sets to the public**. Instead, we require you to upload your model onto CodaLab, so that we can run it on the test sets for you. You can follow the instructions on CodaLab (which is similar to SQuAD, CMRC 2018 submission).
-
-You can submit your model on one or more subsets in ExpMRC. 
-
-Sample submission files are shown in `sample_submission` directory.
+To preserve the integrity of test results and improve the reproducibility, **we do not release the test sets to the public**. Instead, we require you to upload your model onto CodaLab, so that we can run it on the test sets for you. You can follow the instructions on CodaLab (which is similar to SQuAD, CMRC 2018 submission). You can submit your model on one or more subsets in ExpMRC.  Sample submission files are shown in `sample_submission` directory.
 
 Submission policies:
 1. You are free to use any open-source MRC data or automatically generated data for training your systems (both labeled and unlabeled).
