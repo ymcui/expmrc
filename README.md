@@ -24,7 +24,7 @@ Leaderboard: [https://ymcui.github.io/expmrc/](https://ymcui.github.io/expmrc/)
 
 ## News
 
-[May 20, 2021] **We have released our dataset. Please check `data` directory. **
+[May 24, 2021] **We have released our dataset, check `data` directory. The submission site is also open. **
 
 [May 17, 2021] Thank you for your interest in our dataset. We are about to release the dataset and baseline codes in the next few weeks, hopefully on late May. Stay tuned!
 
