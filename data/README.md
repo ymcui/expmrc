@@ -1,4 +1,3 @@
 # Data
 
-TBA
-
+Please see each folder for details.
