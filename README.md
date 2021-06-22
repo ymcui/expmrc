@@ -24,7 +24,7 @@ Leaderboard: [https://ymcui.github.io/expmrc/](https://ymcui.github.io/expmrc/)
 
 ## News
 
-[June 22, 2021] **Pseudo training data is available, check `pseudo-training-data` directory.**
+[June 22, 2021] **Baseline codes and pseudo training data is available, check `baseline` and `pseudo-training-data` directory.**
 
 [May 24, 2021] We have released our dataset, check `data` directory. The submission site is also open.
 
