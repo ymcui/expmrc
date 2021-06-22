@@ -11,10 +11,6 @@ As there is no training data available for ExpMRC, we use pseudo-training data f
 tensorflow 1.5.3
 ```
 
-## Pseudo Training Data
-
-`run.squad.sh` contains the training script for SQuAD.
-
 ## Training SQuAD
 
 `run.squad.sh` contains the training script for SQuAD.
