@@ -11,7 +11,7 @@
 
 With the development of the pre-trained language models (PLMs), achieving human-level performance on several machine reading comprehension (MRC) dataset is not as hard as it used to be. However, the explainability behind these artifacts still remains unclear, raising concerns on utilizing these models in real-life applications. To improve the explainability of MRC tasks, we propose ExpMRC benchmark. 
 
-**ExpMRC** is a benchmark for **Exp**lainability Evaluation of **M**achine **R**eading **C**omprehension. ExpMRC contains four subsets of popular MRC datasets with additionally annotated evidences, including [SQuAD](https://www.aclweb.org/anthology/D16-1264/), [CMRC 2018](https://www.aclweb.org/anthology/D19-1600/), RACE+ (similar to [RACE](https://www.aclweb.org/anthology/D17-1082/)), and [C3](https://www.aclweb.org/anthology/2020.tacl-1.10/), covering span-extraction and multiple-choice questions MRC tasks in both English and Chinese. 
+**ExpMRC** is a benchmark for **Exp**lainability Evaluation of **M**achine **R**eading **C**omprehension. ExpMRC contains four subsets of popular MRC datasets with additionally annotated evidences, including [SQuAD](https://www.aclweb.org/anthology/D16-1264/), [CMRC 2018](https://www.aclweb.org/anthology/D19-1600/), RACE<sup>+</sup> (similar to [RACE](https://www.aclweb.org/anthology/D17-1082/)), and [C<sup>3</sup>](https://www.aclweb.org/anthology/2020.tacl-1.10/), covering span-extraction and multiple-choice questions MRC tasks in both English and Chinese. 
 
 To achieve a higher score in ExpMRC, the model should not only give a correct answer for the question but also give a passage span as the evidence text. We greatly welcome the submission that could be generalized well on different languages and types of MRC tasks with *unsupervised* or *semi-supervised* approaches.
 
@@ -24,7 +24,9 @@ Leaderboard: [https://ymcui.github.io/expmrc/](https://ymcui.github.io/expmrc/)
 
 ## News
 
-[May 24, 2021] **We have released our dataset, check `data` directory. The submission site is also open.**
+[June 22, 2021] **Pseudo training data is available, check `pseudo-training-data` directory.**
+
+[May 24, 2021] We have released our dataset, check `data` directory. The submission site is also open.
 
 [May 17, 2021] Thank you for your interest in our dataset. We are about to release the dataset and baseline codes in the next few weeks, hopefully on late May. Stay tuned!
 
@@ -32,6 +34,8 @@ Leaderboard: [https://ymcui.github.io/expmrc/](https://ymcui.github.io/expmrc/)
 ## Data
 
 As stated in the paper, we **DO NOT** provide any training data. We intend to encourage our community to develop unsupervised or semi-supervised approaches for promoting Explainable MRC. 
+
+Nonetheless, we provide the pseudo training data that was used in our paper. Please check `pseudo-training-data` directory.
 
 For the developmemt sets of ExpMRC, please see `data` directory. 
 
