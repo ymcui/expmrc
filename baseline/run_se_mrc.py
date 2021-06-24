@@ -344,8 +344,8 @@ def read_squad_examples(input_file, is_training, repeat_limit=3):
             actual_answer_text = "".join(doc_tokens[start_position_final:(end_position_final + 1)])
             cleaned_answer_text = "".join(tokenization.whitespace_tokenize(ans_text))
 
-          if actual_answer_text != cleaned_answer_text:
-            print(actual_answer_text, 'V.S', cleaned_answer_text)
+          if actual_answer_text.find(cleaned_answer_text) == -1:
+            tf.logging.warning("Could not find answer: '%s' vs. '%s'", actual_answer_text, cleaned_answer_text)
             continue
 
         # evidence
@@ -377,8 +377,8 @@ def read_squad_examples(input_file, is_training, repeat_limit=3):
             actual_evidence_text = "".join(doc_tokens[evidence_start_position_final:(evidence_end_position_final + 1)])
             cleaned_evidence_text = "".join(tokenization.whitespace_tokenize(evidence_text))
 
-          if actual_evidence_text != cleaned_evidence_text:
-            print(actual_evidence_text, 'V.S', cleaned_evidence_text)
+          if actual_evidence_text.find(cleaned_evidence_text) == -1:
+            tf.logging.warning("Could not find evidence: '%s' vs. '%s'", actual_evidence_text, cleaned_evidence_text)
             continue
 
         example = SquadExample(
