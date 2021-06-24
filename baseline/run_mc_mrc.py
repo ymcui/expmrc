@@ -396,9 +396,9 @@ class RaceProcessor(object):
               actual_text = "".join(doc_tokens[evidence_start_position_final:(evidence_end_position_final + 1)])
               cleaned_evidence_text = "".join(tokenization.whitespace_tokenize(evidence_text))
 
-          if actual_text.find(cleaned_evidence_text) == -1:
-            tf.logging.warning("Could not find evidence: '%s' vs. '%s'", actual_text, cleaned_evidence_text)
-            continue
+            if actual_text.find(cleaned_evidence_text) == -1:
+              tf.logging.warning("Could not find evidence: '%s' vs. '%s'", actual_text, cleaned_evidence_text)
+              continue
 
         examples.append(
             InputExample(
