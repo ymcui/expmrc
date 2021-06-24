@@ -614,8 +614,8 @@ def file_based_convert_examples_to_features(
     features["input_ids"] = create_int_feature(sum(feature.input_ids, []))
     features["input_mask"] = create_int_feature(sum(feature.input_mask, []))
     features["segment_ids"] = create_int_feature(sum(feature.segment_ids, []))
-    features["label_ids"] = create_int_feature([feature.label_id])
     if is_training:
+      features["label_ids"] = create_int_feature([feature.label_id])
       features["evidence_start_positions"] = create_int_feature([feature.evidence_start_position])
       features["evidence_end_positions"] = create_int_feature([feature.evidence_end_position])
 
@@ -768,11 +768,12 @@ def model_fn_builder(bert_config, init_checkpoint, learning_rate,
     input_ids = features["input_ids"]
     input_mask = features["input_mask"]
     segment_ids = features["segment_ids"]
-    label_ids = features["label_ids"]
     if is_training:
+      label_ids = features["label_ids"]
       evidence_start_positions = features["evidence_start_positions"]
       evidence_end_positions   = features["evidence_end_positions"]
     else:
+      label_ids = None
       evidence_start_positions = None
       evidence_end_positions   = None
 
@@ -847,13 +848,12 @@ def input_fn_builder(input_file, seq_length, is_training, drop_remainder, multip
       "input_ids": tf.FixedLenFeature([seq_length * multiple], tf.int64),
       "input_mask": tf.FixedLenFeature([seq_length * multiple], tf.int64),
       "segment_ids": tf.FixedLenFeature([seq_length * multiple], tf.int64),
-      "label_ids": tf.FixedLenFeature([], tf.int64),
   }
 
   if is_training:
+    name_to_features["label_ids"] = tf.FixedLenFeature([], tf.int64)
     name_to_features["evidence_start_positions"] = tf.FixedLenFeature([], tf.int64)
     name_to_features["evidence_end_positions"] = tf.FixedLenFeature([], tf.int64)
-
 
   def _decode_record(record, name_to_features):
     """Decodes a record to a TensorFlow example."""
