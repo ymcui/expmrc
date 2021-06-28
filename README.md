@@ -31,12 +31,12 @@ To achieve a higher score in ExpMRC, the model should not only give a correct an
 
 ## Directory Guide
 
-| -- **ExpMRC Root**
-	| -- baseline							 # Baseline codes  
-	| -- data									# ExpMRC development sets  
-	| -- pseudo_training_data	 # Pseudo training data  
-	| -- sample_submission		 # Sample submission files for ExpMRC  
-	| -- eval_expmrc.py				# Evaluation script  
+| -- **ExpMRC Root**  
+    | -- baseline							 # Baseline codes  
+    | -- data									# ExpMRC development sets  
+    | -- pseudo_training_data	 # Pseudo training data  
+    | -- sample_submission		 # Sample submission files for ExpMRC  
+    | -- eval_expmrc.py				# Evaluation script  
 
 As stated in the paper, we **DO NOT** provide any training data. We intend to encourage our community to develop unsupervised or semi-supervised approaches for promoting Explainable MRC. Nonetheless, we provide the pseudo training data that was used in our paper. Please check `pseudo-training-data` directory.
 
