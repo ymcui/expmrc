@@ -1,12 +1,12 @@
 <p align="center">
-	<br>
-	<img src="./banner.png" width="500"/>
-	<br>
+    <br>
+    <img src="./banner.png" width="500"/>
+    <br>
 </p>
 <p align="center">
-	<a href="https://github.com/ymcui/expmrc/blob/master/LICENSE">
-		<img alt="GitHub" src="https://img.shields.io/github/license/ymcui/expmrc.svg?color=blue&style=flat-square">
-	</a>
+    <a href="https://github.com/ymcui/expmrc/blob/master/LICENSE">
+        <img alt="GitHub" src="https://img.shields.io/github/license/ymcui/expmrc.svg?color=blue&style=flat-square">
+    </a>
 </p>
 
 With the development of the pre-trained language models (PLMs), achieving human-level performance on several machine reading comprehension (MRC) dataset is not as hard as it used to be. However, the explainability behind these artifacts still remains unclear, raising concerns on utilizing these models in real-life applications. To improve the explainability of MRC tasks, we propose ExpMRC benchmark. 
@@ -32,11 +32,11 @@ To achieve a higher score in ExpMRC, the model should not only give a correct an
 ## Directory Guide
 ```
 | -- **ExpMRC Root**  
-	| -- baseline				# Baseline codes  
-	| -- data					# ExpMRC development sets  
-	| -- pseudo_training_data	# Pseudo training data  
-	| -- sample_submission		# Sample submission files for ExpMRC  
-	| -- eval_expmrc.py			# Evaluation script  
+    | -- baseline               # Baseline codes  
+    | -- data                   # ExpMRC development sets  
+    | -- pseudo_training_data   # Pseudo training data  
+    | -- sample_submission      # Sample submission files for ExpMRC  
+    | -- eval_expmrc.py         # Evaluation script  
 ```
 
 As stated in the paper, we **DO NOT** provide any training data. We intend to encourage our community to develop unsupervised or semi-supervised approaches for promoting Explainable MRC. Nonetheless, we provide the pseudo training data that was used in our paper. Please check `pseudo-training-data` directory.
