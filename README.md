@@ -16,11 +16,9 @@ With the development of the pre-trained language models (PLMs), achieving human-
 To achieve a higher score in ExpMRC, the model should not only give a correct answer for the question but also give a passage span as the evidence text. We greatly welcome the submission that could be generalized well on different languages and types of MRC tasks with *unsupervised* or *semi-supervised* approaches.
 
 **ExpMRC: Explainability Evaluation for Machine Reading Comprehension**  
-*Yiming Cui, Ting Liu, Wanxiang Che, Zhigang Chen, Shijin Wang*
+*[Yiming Cui](https://ymcui.com), Ting Liu, Wanxiang Che, Zhigang Chen, Shijin Wang*
 
-arXiv pre-print: [https://arxiv.org/abs/2105.04126](https://arxiv.org/abs/2105.04126)
-
-Leaderboard: [https://ymcui.github.io/expmrc/](https://ymcui.github.io/expmrc/)
+[[arXiv pre-print]](https://arxiv.org/abs/2105.04126) [[**Leaderboard**]](https://ymcui.github.io/expmrc/) [[Papers With Code]](https://paperswithcode.com/dataset/expmrc) 
 
 ## News
 
@@ -31,13 +29,16 @@ Leaderboard: [https://ymcui.github.io/expmrc/](https://ymcui.github.io/expmrc/)
 [May 17, 2021] Thank you for your interest in our dataset. We are about to release the dataset and baseline codes in the next few weeks, hopefully on late May. Stay tuned!
 
 
-## Data
+## Directory Guide
 
-As stated in the paper, we **DO NOT** provide any training data. We intend to encourage our community to develop unsupervised or semi-supervised approaches for promoting Explainable MRC. 
+| -- **ExpMRC Root**
+	| -- baseline							 # Baseline codes
+	| -- data									# ExpMRC development sets
+	| -- pseudo_training_data	 # Pseudo training data
+	| -- sample_submission		 # Sample submission files for ExpMRC
+	| -- eval_expmrc.py				# Evaluation script
 
-Nonetheless, we provide the pseudo training data that was used in our paper. Please check `pseudo-training-data` directory.
-
-For the developmemt sets of ExpMRC, please see `data` directory. 
+As stated in the paper, we **DO NOT** provide any training data. We intend to encourage our community to develop unsupervised or semi-supervised approaches for promoting Explainable MRC. Nonetheless, we provide the pseudo training data that was used in our paper. Please check `pseudo-training-data` directory.
 
 
 ## Submission to Leaderboard
@@ -48,7 +49,7 @@ To preserve the integrity of test results and improve the reproducibility, **we 
 
 Submission policies:
 1. You are free to use any open-source MRC data or automatically generated data for training your systems (both labeled and unlabeled).
-2. You are **NOT** allowed to use any newly human-annotated data (which is not publicly available) for training.
+2. You are **NOT** allowed to use any **publicly unavailable** human-annotated data for training.
 3. We do not encourage using the development set of ExpMRC for training (though it is not prohibited). You should declare whether the system is trained by using the whole/part of the development set. Such submissions will be marked with an asterisk (*).
 
 
