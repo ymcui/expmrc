@@ -1,5 +1,7 @@
 ## Pseudo Training Data
 
+NOTE: The data is **AUTOMATICALLY** generated. You should **NOT** treat these data as official. You are encouraged to design more effective approach to generate pseudo training data if needed.
+
 Data statistics:
 
 | NAME                       | SAMPLES (Questions) |
