@@ -15,14 +15,18 @@ With the development of the pre-trained language models (PLMs), achieving human-
 
 To achieve a higher score in ExpMRC, the model should not only give a correct answer for the question but also give a passage span as the evidence text. We greatly welcome the submission that could be generalized well on different languages and types of MRC tasks with *unsupervised* or *semi-supervised* approaches.
 
-**ExpMRC: Explainability Evaluation for Machine Reading Comprehension**  
-*[Yiming Cui](https://ymcui.com), Ting Liu, Wanxiang Che, Zhigang Chen, Shijin Wang*
+**ExpMRC: Explainability Evaluation for Machine Reading Comprehension**
 
-[[arXiv pre-print]](https://arxiv.org/abs/2105.04126) [[**Leaderboard**]](https://ymcui.github.io/expmrc/) [[Papers With Code]](https://paperswithcode.com/dataset/expmrc) 
+- [Yiming Cui](https://ymcui.com), Ting Liu, Wanxiang Che, Zhigang Chen, Shijin Wang
+- Published in [Heliyon](https://www.cell.com/heliyon)
+
+[[Official Publication]](https://www.cell.com/heliyon/fulltext/S2405-8440(22)00578-3) [[arXiv pre-print]](https://arxiv.org/abs/2105.04126) [[**Leaderboard**]](https://ymcui.github.io/expmrc/) [[Papers With Code]](https://paperswithcode.com/dataset/expmrc) 
 
 ## News
 
-[June 22, 2021] **Baseline codes and pseudo training data are available, check `baseline` and `pseudo-training-data` directory.**
+[Apri 19, 2022] **Our paper is officially published in [Heliyon](https://www.cell.com/heliyon).**
+
+[June 22, 2021] Baseline codes and pseudo training data are available, check `baseline` and `pseudo-training-data` directory.
 
 [May 24, 2021] We have released our dataset, check `data` directory. The submission site is also open.
 
@@ -59,11 +63,16 @@ Submission policies:
 If you are using our benchmark in your work, please cite:
 
 ```
-@article{cui2021expmrc,
+@article{cui-etal-2022-expmrc,
   title={ExpMRC: Explainability Evaluation for Machine Reading Comprehension},
   author={Cui, Yiming and Liu, Ting and Che, Wanxiang and Chen, Zhigang and Wang, Shijin},
-  journal={arXiv preprint arXiv:2105.04126},
-  year={2021}
+  journal={Heliyon},
+  year={2022},
+  volume={8},
+  issue={4},
+  pages={e09290},
+  issn={2405-8440},
+  doi={https://doi.org/10.1016/j.heliyon.2022.e09290}
 }
 ```
 
